@@ -1,0 +1,353 @@
+.hidden {
+    display: none;
+}
+#start-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #2c8dce, #22aee6);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 117, 140, 0.5);
+    outline: none;
+    display: block;
+    margin: 20px auto;
+    animation: glowing 1.5s infinite alternate;
+}
+
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 5px #014572, 0 0 10px #05558a, 0 0 15px #38015e;
+        text-shadow: 0 0 5px #6e0483, 0 0 10px #990592;
+    }
+    100% {
+        box-shadow: 0 0 20px #610269, 0 0 30px #22aee6, 0 0 40px #2c8dce;
+        text-shadow: 0 0 20px #2c8dce, 0 0 30px #8a0a96;
+    }
+}
+
+
+#start-btn:hover {
+    background: linear-gradient(90deg, #ff4f7b, #ff2e63);
+    box-shadow: 0px 6px 15px rgba(255, 47, 99, 0.6);
+    transform: scale(1.05);
+}
+
+#start-btn:active {
+    transform: scale(0.98);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: url('trae.gif') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    background-color: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
+    padding: 30px 50px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgb(124, 170, 145);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(189, 181, 181, 0.2);
+    animation: slideIn 0.7s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.title {
+    font-size: 50px; /* Bigger font */
+    font-family: 'Poppins', sans-serif; /* Modern, bold font */
+    color: #110308; /* Elegant dark red */
+    font-weight: 700; 
+    text-align: center; 
+    text-transform: uppercase; 
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px rgba(77, 4, 28, 0.3); 
+    border: 10px solid #050203; /* Border around the text */
+    padding: 5px; /* Space between text and border */
+    display: inline-block; /* Ensures the border wraps around the text */
+    border-radius: 20px; /* Optional: rounded corners */
+    overflow: hidden; /* Ensures no text goes beyond the border */
+    animation: fadeInText 2.5s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Letter-by-letter animation */
+.title span {
+    opacity: 0;
+    animation: letterByLetter 0.5s forwards;
+}
+
+@keyframes letterByLetter {
+    to {
+        opacity: 1;
+    }
+}
+
+.title span:nth-child(1) { animation-delay: 0.1s; }
+.title span:nth-child(2) { animation-delay: 0.2s; }
+.title span:nth-child(3) { animation-delay: 0.3s; }
+/* Add more nth-child for each character with increasing delays */
+
+
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+#level-selection button {
+    background: linear-gradient(90deg, #2c8dce, #72060f);
+    color: rgb(8, 5, 5);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(231, 6, 43, 0.5);
+    outline: none;
+    display: block;
+    margin: 20px auto;
+    position: relative; /* Needed for animation positioning */
+}
+
+/* Glow animation on hover */
+#level-selection button:hover {
+    animation: glowing 1.5s infinite alternate;
+    transform: scale(1.05); /* Slightly scale up when hovered */
+}
+
+/* Glowing effect animation */
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 5px #012944, 0 0 10px #360105, 0 0 15px #012238;
+    }
+    100% {
+        box-shadow: 0 0 15px #2c8dce, 0 0 25px #4d0107, 0 0 35px #013658;
+    }
+}
+
+/* Optional: Animation on click (when active) */
+#level-selection button:active {
+    animation: clickEffect 0.2s ease-in-out;
+}
+
+/* Click animation effect */
+@keyframes clickEffect {
+    0% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(0.95); /* Shrink slightly to create click effect */
+    }
+    100% {
+        transform: scale(1.05); /* Return to slightly larger size */
+    }
+}
+
+#quiz-container {
+    margin-top: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+#quiz-container h2 {
+    font-size: 22px;
+    color: #441717;
+    font-weight: bold;
+}
+#options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.option {
+    width: 80%;
+    padding: 12px;
+    margin: 8px 0;
+    background: #183a3a;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.option:hover {
+    background: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+.option:active {
+    transform: scale(0.95);
+}
+
+.correct {
+    background-color: #030000 !important;
+    color: rgb(7, 150, 79) !important;
+    animation: correctFlash 0.5s ease-in-out;
+}
+
+@keyframes correctFlash {
+    0% { background-color: #107bc2; }
+    50% { background-color: #115fa8; }
+    100% { background-color: #107ea0; }
+}
+
+.incorrect {
+    background-color: #d63041 !important;
+    color: white !important;
+    animation: incorrectShake 0.s ease-in-out;
+}
+
+@keyframes incorrectShake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+#next-btn {
+    background-color: #28a745;
+    color: rgb(18, 152, 156);
+    display: none;
+    transition: all 0.3s ease;
+}
+
+#next-btn:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+
+#quiz-container {
+    margin-top: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+#quiz-container h2 {
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+}
+#options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#start-btn:hover {
+    background: linear-gradient(90deg, #ff4f7b, #ff2e63);
+    box-shadow: 0px 6px 15px rgba(255, 47, 99, 0.6);
+    transform: scale(1.05);
+}
+
+#start-btn:active {
+    transform: scale(0.98);
+}
+
+/* Base button styling */
+.restart-btn {
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    background: linear-gradient(90deg, #8a4134, #cec4c1); /* Red color gradient */
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+    position: relative; /* Needed for animation positioning */
+}
+
+/* Hover effect */
+.restart-btn:hover {
+    background: linear-gradient(90deg, #042e88, #bec1c9);
+    transform: scale(1.1);
+}
+
+/* Restart animation on click */
+.restart-btn:active {
+    animation: restartEffect 1.0s ease-in-out;
+}
+
+/* Keyframes for restart animation */
+@keyframes restartEffect {
+    0% {
+        transform: scale(1); /* Normal size */
+        background: linear-gradient(90deg, rgb(37, 67, 131), #070505);
+    }
+    30% {
+        transform: scale(1.2); /* Grow the button */
+        background: linear-gradient(90deg, #ff4500, #ff6347);
+    }
+    50% {
+        transform: scale(0.9); /* Shrink slightly */
+        background: linear-gradient(90deg, #ff6347, #ff4500);
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+        background: linear-gradient(90deg, #ff6347, #ff4500);
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="ict-icon.svg" type="image/svg+xml">
+    <link rel="icon" href="ict-icon copy.png" type="image/png">
+
+    
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">ICT ASSESTMENT</h1>
+
+        <!-- Start Button -->
+        <button id="start-btn">Start</button>
+
+        <!-- Level Selection (Hidden Initially) -->
+        <div id="level-selection" class="hidden">
+            <button id="easy-btn">Easy</button>
+            <button id="medium-btn">Medium</button>
+            <button id="hard-btn">Hard</button>
+        </div>
+
+        <div id="quiz-container" class="hidden">
+            <h2 id="question"></h2>
+            <div id="options"></div>
+            <button id="next-btn" class="hidden">Next</button>
+        </div>
+
+        <div id="leaderboard" class="hidden">
+            <h2>Quiz Results</h2>
+            <div id="results"></div>
+            <h3 id="final-score"></h3>
+            <audio loop autoplay>
+                <source src="novocaine - instrumental [nhtGLDy0eJo].mp3" type="audio/mpeg">
+        </audio>
+        
+
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
